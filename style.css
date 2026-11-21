@@ -1,0 +1,788 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #fffafa;
+    --negro: #222025;
+    --gris: #77717a;
+    --fucsia: #e83c83;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 280px;
+    background: var(--fondo);
+    color: var(--negro);
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 10% 15%,
+            #ffe5ef 0,
+            transparent 25%),
+        radial-gradient(circle at 90% 85%,
+            #fce3ed 0,
+            transparent 25%),
+        #fffafa;
+}
+
+
+/* BANNER */
+
+.portada-banner {
+    width: 100%;
+    max-width: 330px;
+    aspect-ratio: 3 / 1;
+    margin: 0 auto 28px;
+    overflow: hidden;
+    background: #f2e8ed;
+    border: 1px solid #eee0e7;
+}
+
+.portada-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* TEXTOS */
+
+.portada-etiqueta {
+    border: 1px solid #252128;
+    padding: 7px 15px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 28px;
+}
+
+.subtitulo {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--fucsia);
+    font-weight: 700;
+}
+
+.portada h1 {
+    font-size: clamp(36px, 9vw, 50px);
+    margin: 12px 0;
+    color: var(--negro);
+}
+
+.instruccion {
+    font-size: 13px;
+    color: var(--gris);
+    margin-bottom: 55px;
+}
+
+.portada-pie {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    color: var(--gris);
+}
+
+
+/* DECORACIONES DE PORTADA */
+
+.portada-deco {
+    margin-top: 32px;
+    width: 100%;
+}
+
+.portada-deco p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--fucsia);
+    margin-bottom: 18px;
+}
+
+.deco-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.deco-imagenes img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   SOBRES BLANCOS Y ROSADOS
+========================= */
+
+.sobre {
+    width: min(230px, 72vw);
+    aspect-ratio: 230 / 155;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto 25px;
+    perspective: 800px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sobre-fondo {
+    position: absolute;
+    inset: 0;
+    background: #fff0f5;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px #d98ba433;
+}
+
+.sobre-fondo::before,
+.sobre-fondo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.sobre-fondo::before {
+    background: #f8dce6;
+    clip-path: polygon(0 50%, 50% 100%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.sobre-fondo::after {
+    background: #ffffff;
+    clip-path: polygon(0 100%, 50% 48%, 100% 100%);
+}
+
+.solapa {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #e9a9bb;
+    clip-path: polygon(0 0, 100% 0, 50% 62%);
+    transform-origin: top;
+    transition: transform 0.7s ease;
+    z-index: 3;
+}
+
+.corazon-sobre {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+}
+
+.sobre.abierto .solapa {
+    transform: rotateX(180deg);
+}
+
+.tocar {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--gris);
+}
+
+.segundo-sobre {
+    margin: 30px auto;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.oculto {
+    display: none !important;
+}
+
+.contenido {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 55px 18px;
+    animation: aparecer 1s ease;
+}
+
+.contenido > h2 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.pequeno {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--fucsia);
+    font-weight: 700;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   SELECTOR DE COLORES
+========================= */
+
+.selector {
+    margin: 35px 0;
+}
+
+.selector-titulo {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.colores {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    margin-top: 18px;
+}
+
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px #00000025;
+    cursor: pointer;
+}
+
+.rosa {
+    background: #c55778;
+}
+
+.amarillo {
+    background: #f5e6a9;
+}
+
+.crema {
+    background: #850a0a;
+}
+
+.ayuda-color {
+    font-size: 10px;
+    color: var(--gris);
+    margin-top: 15px;
+}
+
+
+/* =========================
+   CARTA PRINCIPAL
+========================= */
+
+.carta {
+    --fondo-carta: #ffeaf1;
+    --texto-carta: #805866;
+
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+
+    background: var(--fondo-carta);
+    color: var(--texto-carta);
+
+    border-radius: 5px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px #00000012;
+    border: 1px solid #eee0e7;
+
+    text-align: left;
+
+    transition: background 0.4s, color 0.4s;
+    position: relative;
+}
+
+.carta-contenido {
+    position: relative;
+    padding: 30px 24px;
+    line-height: 1.9;
+}
+
+.carta h2 {
+    font-size: clamp(22px, 6vw, 28px);
+    text-align: center;
+    color: inherit;
+    margin: 10px 0;
+}
+
+.carta p {
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.carta .fecha {
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--fucsia);
+}
+
+.carta-decoracion {
+    text-align: center;
+    font-size: 19px;
+    color: var(--fucsia);
+    margin: 10px 0;
+}
+
+.separador {
+    text-align: center;
+    font-size: 22px;
+    margin: 15px 0;
+    color: var(--fucsia);
+}
+
+.firma {
+    text-align: right;
+    font-style: italic;
+    margin-top: 35px !important;
+}
+
+
+/* FLORES */
+
+.flor {
+    position: absolute;
+    width: 75px;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+.flor1 {
+    top: 0;
+    right: 0;
+}
+
+.flor2 {
+    bottom: 0;
+    left: 0;
+}
+
+
+/* DECORACIONES BLANCAS */
+
+.carta.decoraciones-blancas .carta-decoracion,
+.carta.decoraciones-blancas .separador,
+.carta.decoraciones-blancas .fecha {
+    color: #ffffff !important;
+}
+
+/* =========================
+   ÁLBUM DE POLAROIDS
+========================= */
+
+.album {
+    padding: 85px 5px 55px;
+    position: relative;
+}
+
+.album h2 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.album-descripcion {
+    font-size: 11px;
+    color: var(--gris);
+}
+
+.polaroids {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 13px;
+    width: 100%;
+    max-width: 390px;
+    margin: 35px auto 0;
+    padding: 10px 5px;
+}
+
+.polaroid {
+    min-width: 0;
+    margin: 0;
+    padding: 8px 8px 15px;
+    background: white;
+    box-shadow: 0 5px 18px #00000018;
+    border: 1px solid #eee9ec;
+}
+
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+}
+
+.polaroid1 {
+    transform: rotate(-4deg);
+}
+
+.polaroid2 {
+    transform: rotate(3deg);
+    margin-top: 15px;
+}
+
+.polaroid3 {
+    transform: rotate(3deg);
+}
+
+.polaroid4 {
+    transform: rotate(-3deg);
+    margin-top: 15px;
+}
+
+.stickers-album {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 35px auto 0;
+    color: var(--fucsia);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.detalle-album {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   POMPOMPURIN
+========================= */
+
+.purin-section {
+    padding: 70px 12px;
+    margin-top: 30px;
+    background: #fff4f7;
+    border-top: 1px solid #f2dce5;
+    border-bottom: 1px solid #f2dce5;
+}
+
+.seccion-etiqueta {
+    display: inline-block;
+    border: 1px solid #e9b4ca;
+    padding: 7px 13px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.purin-section h2 {
+    max-width: 340px;
+    margin: 12px auto;
+    font-size: 25px;
+}
+
+.purin-section p {
+    font-size: 12px;
+}
+
+.purin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 135px;
+    height: 135px;
+
+    background: #fff0bd;
+    border-radius: 50%;
+
+    margin: 20px;
+    padding: 8px;
+
+    box-shadow: 0 8px 20px #c9a65a33;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: transform 0.2s;
+    touch-action: manipulation;
+}
+
+.purin:active {
+    transform: scale(0.88);
+}
+
+.purin img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: aparecer 0.4s ease;
+}
+
+.purin-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+#contador {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--fucsia);
+}
+
+#entrega {
+    margin-top: 35px;
+    animation: aparecer 1s ease;
+}
+
+#entrega h3 {
+    color: var(--fucsia);
+}
+
+.purin-entrega {
+    width: 160px;
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+    margin: 20px auto;
+}
+
+
+/* =========================
+   SEGUNDA CARTA
+========================= */
+
+.segunda-carta {
+    padding: 65px 12px 90px;
+    animation: aparecer 1s ease;
+}
+
+.carta-final {
+    background: #ffeaf1;
+    text-align: center;
+    padding: 0;
+}
+
+.carta-final h1 {
+    color: var(--fucsia);
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.3;
+}
+
+.carta-final p {
+    text-align: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 15px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gris);
+    background: #fffafa;
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 360px) {
+
+    .portada {
+        padding: 25px 14px;
+    }
+
+    .portada-banner {
+        max-width: 270px;
+    }
+
+    .deco-imagenes img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .contenido {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .carta-contenido {
+        padding: 25px 17px;
+    }
+
+    .polaroids {
+        gap: 18px 9px;
+    }
+
+    .polaroid {
+        padding: 6px 6px 12px;
+    }
+
+}
+
+
+/* =========================
+   TABLETS Y COMPUTADORES
+========================= */
+
+@media (min-width: 700px) {
+
+    .contenido {
+        padding-top: 70px;
+    }
+
+    .carta {
+        max-width: 500px;
+    }
+
+    .polaroids {
+        max-width: 420px;
+        gap: 30px 22px;
+    }
+
+}
+
+
+/* ELEMENTOS TÁCTILES */
+
+button,
+.sobre,
+.purin {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+button:focus-visible,
+.sobre:focus-visible,
+.purin:focus-visible {
+    outline: 2px solid var(--fucsia);
+    outline-offset: 4px;
+}
+
+/* REPRODUCTOR DE MÚSICA */
+
+.reproductor {
+    width: 100%;
+    max-width: 300px;
+    margin: 35px auto;
+    padding: 22px 18px;
+
+    background: #ffffff;
+    border: 1px solid #eadde3;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px #00000010;
+}
+
+.reproductor-titulo {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #c55778;
+    margin-bottom: 20px;
+}
+
+.controles-musica {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controles-musica button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+
+    background: #c55778;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controles-musica button:active {
+    transform: scale(0.9);
+}
+
+.control-volumen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    color: #c55778;
+}
+
+.control-volumen input {
+    width: 150px;
+    accent-color: #c55778;
+    cursor: pointer;
+}
+
+#volumenTexto {
+    font-size: 10px;
+    color: #888;
+    margin-top: 12px;
+}
+
+

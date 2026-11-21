@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una carta para ti ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PORTADA -->
+
+    <section class="portada" id="portada">
+
+        <!-- BANNER SUPERIOR -->
+        <div class="portada-banner">
+            <img src="banner.jpeg" alt="Banner especial">
+        </div>
+
+        <div class="portada-etiqueta">
+            MY FEELINGS FOR YOU 
+        </div>
+
+        <p class="subtitulo">UNA CARTA PARA TI AMOR MIO</p>
+
+        <h1>Te amo, Aza.</h1>
+
+        <p class="instruccion">
+            hice algo especialmente para ti.
+        </p>
+
+        <!-- PRIMER SOBRE -->
+
+        <div class="sobre" id="sobre" onclick="abrirCarta()">
+            <div class="sobre-fondo"></div>
+            <div class="solapa"></div>
+            <div class="corazon-sobre">♡</div>
+        </div>
+
+        <p class="tocar">Toca el sobre para abrirlo</p>
+
+        <p class="portada-pie">
+            MY HEARTH IS YOURS
+        </p>
+
+        <!-- DECORACIONES INFERIORES -->
+
+        <div class="portada-deco">
+
+            <p>US</p>
+
+            <div class="deco-imagenes">
+
+                <img src="detalle2.jpeg" alt="Decoración 1">
+
+                <img src="detalle1.jpeg" alt="Decoración 2">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <section class="contenido oculto" id="contenido">
+
+<!-- REPRODUCTOR DE MÚSICA -->
+
+<div class="reproductor">
+
+    <p class="reproductor-titulo">A SONG FOR YOU ♡</p>
+
+    <audio id="musica" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="controles-musica">
+
+        <button id="playMusica" onclick="reproducirMusica()">
+            ▶
+        </button>
+
+        <button id="pausaMusica" onclick="pausarMusica()">
+            ❚❚
+        </button>
+
+    </div>
+
+    <div class="control-volumen">
+
+        <span>−</span>
+
+        <input
+            type="range"
+            id="volumen"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.15"
+        >
+
+        <span>+</span>
+
+    </div>
+
+    <p id="volumenTexto">Volumen: 15%</p>
+
+</div>
+
+
+        <p class="pequeno">(´▽`ʃ♡ƪ)</p>
+
+        <h2>Para ti Aza..</h2>
+
+        <p class="introduccion">
+            algo que hice con mucho cariño para ti.
+        </p>
+
+
+        <!-- SELECTOR DE COLORES -->
+
+        <div class="selector">
+
+            <p class="selector-titulo">Elige el color de tu carta ♡</p>
+
+            <div class="colores">
+
+                <button class="color rosa"
+                    onclick="cambiarColor('rosa')"
+                    aria-label="Rosa">
+                </button>
+
+                <button class="color amarillo"
+                    onclick="cambiarColor('amarillo')"
+                    aria-label="Amarillo">
+                </button>
+
+                <button class="color crema"
+                    onclick="cambiarColor('crema')"
+                    aria-label="Rojo">
+                </button>
+
+            </div>
+
+            <p class="ayuda-color">
+                Ya que nunca pude decidir qué color ponerle,
+                decidí que eligieras lo que tú gustes.
+            </p>
+
+        </div>
+
+
+        <!-- PRIMERA CARTA -->
+
+        <article class="carta" id="carta">
+
+            <div class="carta-contenido">
+
+                <!-- DECORACIÓN FLORAL -->
+
+                <img class="flor flor1"
+                    src="decoracion1.png.png"
+                    alt="Decoración floral">
+
+                <div class="carta-decoracion">♡ ✿ ♡</div>
+
+                <h2>Para ti Azariah</h2>
+
+                <p class="fecha">22 de noviembre</p>
+
+                <div class="separador">୨୧</div>
+
+                <p>Hola, amor.</p>
+
+                <p>
+                    Aza, Te amo y te e amado por mucho tiempo. desde que empezamos en febrero me has hecho muy feliz, cuando nos reíamos por tonteras o jugábamos juntos, cuando me decías lo mucho que me amabas y yo a ti, aunque en ese momento tome malas decisiones y eso me llevo a alejarme de ti siempre espere que fueras feliz donde estuvieras o con quien fuera y la vrd creo que muchas casualidades me llevaron a donde estoy ahora y no sabría decirte si es mi destino pero volverte a encontrar de nuevo, hablarte, lograrte pedir perdón por las cosas que me equivoque, me llevo a sentir cosas por ti de nuevo y esta vez a no querer soltarte como lo hice alguna vez, tenerte a mi lado pase lo que pase, aunque las cosas se pongan complicadas para cualquiera de los dos quiero estar ahi, aunque me haya costado mucho decir esto y mas que todo aceptarlo, quiero decirte que estoy muy seguro de lo que siento por ti.
+                </p>
+
+                <p>
+                  Me acuerdo cuando me quedaba despierto pensando en ti, soñando contigo, cuando me llamabas y mi corazón latía cada vez mas rápido, cuando me decías "te quiero" y lo único que quería decirte es que me gustabas, creo que todo nos llevó a este momento en nuestra vida y si puedo volver a tomar la oportunidad de estar a tu lado quiero tomarla y no quiero desperdiciarla nunca mas.
+                </p>
+
+                <p>
+                    La verdad volverte a hablar nunca fue de mis planes y menos volver a sentir esto por ti, pero cuando hablamos por primera vez después de 6 meses, hicimos llamada y sentí que de cualquier manera te había extrañado, poco a poco confiar en ti de nuevo, hablar de las cosas que pasaron después y aunque no esperaba sentirme asi por ti de nuevo, no me arrepiento de hacerlo, me haces sentir feliz de volver a hablar contigo y ahora que ya nos conocemos hace un rato siento que siempre puedo divertirme a tu lado, descubrir mas de ti.
+
+                </p>
+
+                <p>
+                    Aza, me gustas tu y todo de ti, como te ries, como hablas de lo que te gusta, cuando solo dices "mmm" y intento adivinar que quieres decirme con eso, cuando cantas lo que sea, como te sabes casi todas las canciones, como me apoyas cuando me siento mal, como me haces reir solo con tu presencia, cuando hablamos por llamada y tdo lo malo que haya pasado se me olvida y lo único que pienso es el amor tan profundo que te tengo, cuando veo tus hermosos ojos, tu bonito pelo, tu lindo cuerpo y la vrd es q tdo de ti aza. por que me gustas, te adoro y me encantas, todo de ti.
+                </p>
+
+                <p class="firma">
+                    Con mucho amor,<br>
+                    Valentin ♡
+                </p>
+
+                <!-- SEGUNDA DECORACIÓN FLORAL -->
+
+                <img class="flor flor2"
+                    src="decoracion2.png.png"
+                    alt="Flor decorativa">
+
+                <div class="carta-decoracion">♡ ✿ ♡</div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ÁLBUM DE POLAROIDS -->
+
+        <section class="album">
+
+            <p class="pequeno">algo de nosotros</p>
+
+            <h2>♡</h2>
+
+            <p class="album-descripcion">
+                Te amo.
+            </p>
+
+            <div class="polaroids">
+
+                <figure class="polaroid polaroid1">
+                    <img src="pareja1.jpeg" alt="Imagen de pareja 1">
+                </figure>
+
+                <figure class="polaroid polaroid2">
+                    <img src="pareja4.jpeg" alt="Imagen de pareja 2">
+                </figure>
+
+                <figure class="polaroid polaroid3">
+                    <img src="pareja3.jpeg" alt="Imagen de pareja 3">
+                </figure>
+
+                <figure class="polaroid polaroid4">
+                    <img src="pareja2.jpeg" alt="Imagen de pareja 4">
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- JUEGO DE POMPOMPURIN -->
+
+        <section class="purin-section" id="purinSection">
+
+            <p class="pequeno">POMPOMPURIN</p>
+
+            <h2>
+                Pompompurin se guardó una carta de Valen
+            </h2>
+
+            <p id="purinAyuda">
+                tócalo varias veces para que la dé!
+            </p>
+
+            <div class="purin" id="purin" onclick="tocarPurin()">
+
+                <img id="purinImagen"
+                    src="imagen1.png.png"
+                    alt="Pompompurin feliz">
+
+            </div>
+
+            <h3 id="purinTexto">holii</h3>
+
+            <p id="contador">0 / 8</p>
+
+
+            <!-- ENTREGA DE LA CARTA -->
+
+            <div id="entrega" class="oculto">
+
+                <h3>Esta bien, te la doy!</h3>
+
+                <p>Lo guarde para ti</p>
+
+                <img class="purin-entrega"
+                    src="imagen4.png.png"
+                    alt="Pompompurin entregando una carta">
+
+                <p class="pequeno">
+                    Lo ultimo que quiero decirte..
+                </p>
+
+
+                <!-- SEGUNDO SOBRE -->
+
+                <div class="sobre segundo-sobre"
+                    id="segundoSobre"
+                    onclick="abrirSegundaCarta()">
+
+                    <div class="sobre-fondo"></div>
+
+                    <div class="solapa"></div>
+
+                    <div class="corazon-sobre">♡</div>
+
+                </div>
+
+                <p class="tocar">
+                    Toca para saber que dice la ultima carta
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEGUNDA CARTA FINAL -->
+
+        <section id="segundaCarta"
+            class="segunda-carta oculto">
+
+            <p class="pequeno">TE AMO ♡</p>
+
+            <article class="carta carta-final">
+
+                <div class="carta-contenido">
+
+                    <div class="carta-decoracion">♡ ✿ ♡</div>
+
+                    <h1>¿Quieres ser mi novio?</h1>
+
+                    <p>
+                        
+                        Quiero volver a intentarlo contigo, quiero volver a elegirte como una vez ya lo hice.
+                    </p>
+
+                    <p>
+                        poder superar todo lo bueno, lo malo y lo que venga pero lo mas importante junto a ti
+                    </p>
+
+                    <p class="firma">
+                        Te amo muchísimo, amor. ♡
+                    </p>
+
+                    <div class="carta-decoracion">♡ ✿ ♡</div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </section>
+
+
+    <footer>
+        Hecho para ti con mucho amor ♡
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
